@@ -16,6 +16,10 @@
 		146A41651D662D6700FDCFA6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 146A41631D662D6700FDCFA6 /* LaunchScreen.storyboard */; };
 		146A41701D662D6700FDCFA6 /* SophiaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146A416F1D662D6700FDCFA6 /* SophiaTests.swift */; };
 		146A417B1D662D6700FDCFA6 /* SophiaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146A417A1D662D6700FDCFA6 /* SophiaUITests.swift */; };
+		146A41951D66464000FDCFA6 /* StartScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146A41941D66464000FDCFA6 /* StartScreen.swift */; };
+		146A41971D66472E00FDCFA6 /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146A41961D66472E00FDCFA6 /* Menu.swift */; };
+		146A419B1D664B5600FDCFA6 /* Menu.sks in Resources */ = {isa = PBXBuildFile; fileRef = 146A419A1D664B5600FDCFA6 /* Menu.sks */; };
+		146A419D1D66513E00FDCFA6 /* StartScreen.sks in Resources */ = {isa = PBXBuildFile; fileRef = 146A419C1D66513E00FDCFA6 /* StartScreen.sks */; };
 		8A2EF8501D6644F50025F5D2 /* walkingSophia.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 8A2EF84F1D6644F50025F5D2 /* walkingSophia.atlas */; };
 		8A8763C51D66353F00DAC177 /* SophiaClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8763C41D66353F00DAC177 /* SophiaClass.swift */; };
 /* End PBXBuildFile section */
@@ -53,6 +57,10 @@
 		146A41761D662D6700FDCFA6 /* SophiaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SophiaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		146A417A1D662D6700FDCFA6 /* SophiaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SophiaUITests.swift; sourceTree = "<group>"; };
 		146A417C1D662D6700FDCFA6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		146A41941D66464000FDCFA6 /* StartScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartScreen.swift; sourceTree = "<group>"; };
+		146A41961D66472E00FDCFA6 /* Menu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
+		146A419A1D664B5600FDCFA6 /* Menu.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Menu.sks; sourceTree = "<group>"; };
+		146A419C1D66513E00FDCFA6 /* StartScreen.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = StartScreen.sks; sourceTree = "<group>"; };
 		8A2EF84F1D6644F50025F5D2 /* walkingSophia.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = walkingSophia.atlas; sourceTree = "<group>"; };
 		8A8763C41D66353F00DAC177 /* SophiaClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SophiaClass.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -85,6 +93,7 @@
 		146A414A1D662D6700FDCFA6 = {
 			isa = PBXGroup;
 			children = (
+				146A41931D6645E200FDCFA6 /* Menu */,
 				8A2EF84E1D6644EC0025F5D2 /* Atlas */,
 				8A8763C31D6634E700DAC177 /* Personagem Sophia */,
 				146A41551D662D6700FDCFA6 /* Sophia */,
@@ -108,8 +117,8 @@
 			isa = PBXGroup;
 			children = (
 				146A41561D662D6700FDCFA6 /* AppDelegate.swift */,
-				146A41581D662D6700FDCFA6 /* GameScene.sks */,
 				146A415A1D662D6700FDCFA6 /* GameScene.swift */,
+				146A41581D662D6700FDCFA6 /* GameScene.sks */,
 				146A415C1D662D6700FDCFA6 /* GameViewController.swift */,
 				146A415E1D662D6700FDCFA6 /* Main.storyboard */,
 				146A41611D662D6700FDCFA6 /* Assets.xcassets */,
@@ -135,6 +144,17 @@
 				146A417C1D662D6700FDCFA6 /* Info.plist */,
 			);
 			path = SophiaUITests;
+			sourceTree = "<group>";
+		};
+		146A41931D6645E200FDCFA6 /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				146A41941D66464000FDCFA6 /* StartScreen.swift */,
+				146A419C1D66513E00FDCFA6 /* StartScreen.sks */,
+				146A41961D66472E00FDCFA6 /* Menu.swift */,
+				146A419A1D664B5600FDCFA6 /* Menu.sks */,
+			);
+			name = Menu;
 			sourceTree = "<group>";
 		};
 		8A2EF84E1D6644EC0025F5D2 /* Atlas */ = {
@@ -257,10 +277,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				146A419B1D664B5600FDCFA6 /* Menu.sks in Resources */,
 				146A41591D662D6700FDCFA6 /* GameScene.sks in Resources */,
 				146A41651D662D6700FDCFA6 /* LaunchScreen.storyboard in Resources */,
 				146A41621D662D6700FDCFA6 /* Assets.xcassets in Resources */,
 				8A2EF8501D6644F50025F5D2 /* walkingSophia.atlas in Resources */,
+				146A419D1D66513E00FDCFA6 /* StartScreen.sks in Resources */,
 				146A41601D662D6700FDCFA6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -286,8 +308,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				146A41971D66472E00FDCFA6 /* Menu.swift in Sources */,
 				146A415B1D662D6700FDCFA6 /* GameScene.swift in Sources */,
 				146A415D1D662D6700FDCFA6 /* GameViewController.swift in Sources */,
+				146A41951D66464000FDCFA6 /* StartScreen.swift in Sources */,
 				8A8763C51D66353F00DAC177 /* SophiaClass.swift in Sources */,
 				146A41571D662D6700FDCFA6 /* AppDelegate.swift in Sources */,
 			);

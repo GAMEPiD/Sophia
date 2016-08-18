@@ -22,7 +22,6 @@ class GameScene: SKScene {
         
         //self.childNodeWithName("sophia")?.position.x = (self.childNodeWithName("sophia")?.position.x)!+100
         
-        
         //sophia = SophiaClass()
         sophia.position.x = self.childNodeWithName("sophia")!.position.x+200
         sophia.position.y = self.childNodeWithName("sophia")!.position.y
