@@ -16,8 +16,9 @@
 		146A41651D662D6700FDCFA6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 146A41631D662D6700FDCFA6 /* LaunchScreen.storyboard */; };
 		146A41701D662D6700FDCFA6 /* SophiaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146A416F1D662D6700FDCFA6 /* SophiaTests.swift */; };
 		146A417B1D662D6700FDCFA6 /* SophiaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146A417A1D662D6700FDCFA6 /* SophiaUITests.swift */; };
-		8A2EF8501D6644F50025F5D2 /* walkingSophia.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 8A2EF84F1D6644F50025F5D2 /* walkingSophia.atlas */; };
 		8A8763C51D66353F00DAC177 /* SophiaClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8763C41D66353F00DAC177 /* SophiaClass.swift */; };
+		8AB298AE1D664BB5005A1D6E /* stopSophia.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 8AB298AD1D664BB5005A1D6E /* stopSophia.atlas */; };
+		8AB298B21D664EAF005A1D6E /* walkSophia.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 8AB298B11D664EAF005A1D6E /* walkSophia.atlas */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,8 +54,9 @@
 		146A41761D662D6700FDCFA6 /* SophiaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SophiaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		146A417A1D662D6700FDCFA6 /* SophiaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SophiaUITests.swift; sourceTree = "<group>"; };
 		146A417C1D662D6700FDCFA6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8A2EF84F1D6644F50025F5D2 /* walkingSophia.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = walkingSophia.atlas; sourceTree = "<group>"; };
 		8A8763C41D66353F00DAC177 /* SophiaClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SophiaClass.swift; sourceTree = "<group>"; };
+		8AB298AD1D664BB5005A1D6E /* stopSophia.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = stopSophia.atlas; sourceTree = "<group>"; };
+		8AB298B11D664EAF005A1D6E /* walkSophia.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = walkSophia.atlas; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,7 +142,8 @@
 		8A2EF84E1D6644EC0025F5D2 /* Atlas */ = {
 			isa = PBXGroup;
 			children = (
-				8A2EF84F1D6644F50025F5D2 /* walkingSophia.atlas */,
+				8AB298B11D664EAF005A1D6E /* walkSophia.atlas */,
+				8AB298AD1D664BB5005A1D6E /* stopSophia.atlas */,
 			);
 			name = Atlas;
 			sourceTree = "<group>";
@@ -221,6 +224,7 @@
 				TargetAttributes = {
 					146A41521D662D6700FDCFA6 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = N8JBYBWDT9;
 					};
 					146A416A1D662D6700FDCFA6 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -260,8 +264,9 @@
 				146A41591D662D6700FDCFA6 /* GameScene.sks in Resources */,
 				146A41651D662D6700FDCFA6 /* LaunchScreen.storyboard in Resources */,
 				146A41621D662D6700FDCFA6 /* Assets.xcassets in Resources */,
-				8A2EF8501D6644F50025F5D2 /* walkingSophia.atlas in Resources */,
+				8AB298AE1D664BB5005A1D6E /* stopSophia.atlas in Resources */,
 				146A41601D662D6700FDCFA6 /* Main.storyboard in Resources */,
+				8AB298B21D664EAF005A1D6E /* walkSophia.atlas in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -431,6 +436,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Sophia/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = GAMEPiD.Sophia;
@@ -442,6 +448,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Sophia/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = GAMEPiD.Sophia;
