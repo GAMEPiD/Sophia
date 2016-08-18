@@ -16,6 +16,8 @@
 		146A41651D662D6700FDCFA6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 146A41631D662D6700FDCFA6 /* LaunchScreen.storyboard */; };
 		146A41701D662D6700FDCFA6 /* SophiaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146A416F1D662D6700FDCFA6 /* SophiaTests.swift */; };
 		146A417B1D662D6700FDCFA6 /* SophiaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146A417A1D662D6700FDCFA6 /* SophiaUITests.swift */; };
+		8A2EF8501D6644F50025F5D2 /* walkingSophia.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 8A2EF84F1D6644F50025F5D2 /* walkingSophia.atlas */; };
+		8A8763C51D66353F00DAC177 /* SophiaClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8763C41D66353F00DAC177 /* SophiaClass.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,8 @@
 		146A41761D662D6700FDCFA6 /* SophiaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SophiaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		146A417A1D662D6700FDCFA6 /* SophiaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SophiaUITests.swift; sourceTree = "<group>"; };
 		146A417C1D662D6700FDCFA6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8A2EF84F1D6644F50025F5D2 /* walkingSophia.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = walkingSophia.atlas; sourceTree = "<group>"; };
+		8A8763C41D66353F00DAC177 /* SophiaClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SophiaClass.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +85,8 @@
 		146A414A1D662D6700FDCFA6 = {
 			isa = PBXGroup;
 			children = (
+				8A2EF84E1D6644EC0025F5D2 /* Atlas */,
+				8A8763C31D6634E700DAC177 /* Personagem Sophia */,
 				146A41551D662D6700FDCFA6 /* Sophia */,
 				146A416E1D662D6700FDCFA6 /* SophiaTests */,
 				146A41791D662D6700FDCFA6 /* SophiaUITests */,
@@ -129,6 +135,22 @@
 				146A417C1D662D6700FDCFA6 /* Info.plist */,
 			);
 			path = SophiaUITests;
+			sourceTree = "<group>";
+		};
+		8A2EF84E1D6644EC0025F5D2 /* Atlas */ = {
+			isa = PBXGroup;
+			children = (
+				8A2EF84F1D6644F50025F5D2 /* walkingSophia.atlas */,
+			);
+			name = Atlas;
+			sourceTree = "<group>";
+		};
+		8A8763C31D6634E700DAC177 /* Personagem Sophia */ = {
+			isa = PBXGroup;
+			children = (
+				8A8763C41D66353F00DAC177 /* SophiaClass.swift */,
+			);
+			name = "Personagem Sophia";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -238,6 +260,7 @@
 				146A41591D662D6700FDCFA6 /* GameScene.sks in Resources */,
 				146A41651D662D6700FDCFA6 /* LaunchScreen.storyboard in Resources */,
 				146A41621D662D6700FDCFA6 /* Assets.xcassets in Resources */,
+				8A2EF8501D6644F50025F5D2 /* walkingSophia.atlas in Resources */,
 				146A41601D662D6700FDCFA6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -265,6 +288,7 @@
 			files = (
 				146A415B1D662D6700FDCFA6 /* GameScene.swift in Sources */,
 				146A415D1D662D6700FDCFA6 /* GameViewController.swift in Sources */,
+				8A8763C51D66353F00DAC177 /* SophiaClass.swift in Sources */,
 				146A41571D662D6700FDCFA6 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -492,6 +516,7 @@
 				146A41811D662D6700FDCFA6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		146A41821D662D6700FDCFA6 /* Build configuration list for PBXNativeTarget "SophiaTests" */ = {
 			isa = XCConfigurationList;
@@ -500,6 +525,7 @@
 				146A41841D662D6700FDCFA6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		146A41851D662D6700FDCFA6 /* Build configuration list for PBXNativeTarget "SophiaUITests" */ = {
 			isa = XCConfigurationList;
@@ -508,6 +534,7 @@
 				146A41871D662D6700FDCFA6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
