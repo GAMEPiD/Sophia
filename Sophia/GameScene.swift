@@ -8,9 +8,14 @@
 
 import SpriteKit
 
+var tapGesture: UITapGestureRecognizer = UITapGestureRecognizer()
+var panGesture: UIPanGestureRecognizer = UIPanGestureRecognizer()
+
+var previousPosition: CGPoint?
+
 let sophia: SophiaClass = SophiaClass()
 
-class GameScene: SKScene {
+class GameScene: SKScene, UIGestureRecognizerDelegate {
     override func didMoveToView(view: SKView) {
         /* Setup your scene here */
         let myLabel = SKLabelNode(fontNamed:"Chalkduster")
@@ -28,29 +33,68 @@ class GameScene: SKScene {
         
         self.childNodeWithName("sophia")?.removeFromParent()
         self.addChild(sophia)
+        
+        /// GESTURES
+        
+        panGesture = UIPanGestureRecognizer(target: self, action: #selector(GameScene.panControl(_:)))
+        self.view?.addGestureRecognizer(panGesture)
+        
+        
+        tapGesture = UITapGestureRecognizer(target: self, action: #selector(GameScene.tapControl(_:)))
+        self.view?.addGestureRecognizer(tapGesture)
+        
+        tapGesture.delegate = self
+        panGesture.delegate = self
+    }
+    
+    //    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+    //        sophia.andar((Int)(1+arc4random()%2))
+    //
+    //    }
+    
+    override func update(currentTime: CFTimeInterval) {
+        /* Called before each frame is rendered */
+    }
+    
+    func tapControl(sender: UITapGestureRecognizer){
+        print("Pulou")
+        sophia.physicsBody?.applyImpulse(CGVectorMake((sophia.physicsBody?.velocity.dx)!, 50))
+        
+    }
+    
+    func panControl(sender: UIPanGestureRecognizer){
+        if panGesture.locationInView(self.view).x > previousPosition?.x {
+            if panGesture.locationInView(self.view).x > previousPosition!.x+200{
+                previousPosition!.x = panGesture.locationInView(self.view).x-200
+            }
+            sophia.andar(2)
+        } else if panGesture.locationInView(self.view).x < previousPosition?.x{
+            if panGesture.locationInView(self.view).x < previousPosition!.x-200{
+                previousPosition!.x = panGesture.locationInView(self.view).x+200
+            }
+            sophia.andar(1)
+        }
     }
     
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
-        sophia.andar(2)
-        
-//        for touch in touches {
-//            let location = touch.locationInNode(self)
-//            
-//            let sprite = SKSpriteNode(imageNamed:"Spaceship")
-//            
-//            sprite.xScale = 0.5
-//            sprite.yScale = 0.5
-//            sprite.position = location
-//            
-//            let action = SKAction.rotateByAngle(CGFloat(M_PI), duration:1)
-//            
-//            sprite.runAction(SKAction.repeatActionForever(action))
-//            
-//            self.addChild(sprite)
-//        }
+        /* Called when a touch begins */
+        if panGesture.locationInView(self.view).x < (self.view?.frame.size.width)!/2{
+            previousPosition = panGesture.locationInView(self.view)
+        }
+        print("tocou")
     }
-   
-    override func update(currentTime: CFTimeInterval) {
-        /* Called before each frame is rendered */
+    
+    func gestureRecognizer(gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWithGestureRecognizer otherGestureRecognizer: UIGestureRecognizer) -> Bool {
+        return true
+    }
+    
+    func gestureRecognizer(gestureRecognizer: UIGestureRecognizer, shouldReceiveTouch touch: UITouch) -> Bool {
+        if gestureRecognizer == panGesture && touch.locationInView(self.view).x > (self.view?.frame.size.width)!/2 {
+            return false
+        }
+        if gestureRecognizer == tapGesture && touch.locationInView(self.view).x < (self.view?.frame.size.width)!/2 {
+            return false
+        }
+        return true
     }
 }
