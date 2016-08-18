@@ -20,7 +20,7 @@ class SophiaClass: SKSpriteNode {
     var stopAnimation: SKAction? = nil
     
     init() {
-        let texture = SKTexture(imageNamed: "andando_000.png")
+        let texture = SKTexture(imageNamed: "stopSophia01.png")
         super.init(texture: texture, color: SKColor.clearColor(), size: texture.size())
         
         initSophiaAnimation()
@@ -40,6 +40,7 @@ class SophiaClass: SKSpriteNode {
     }
     
     func andar(lado: Int) {
+        /// Andar para direita
         if lado == 2 {
             if physicsBody?.velocity.dx <= 0 {
                 self.runAction(SKAction.repeatActionForever(walkingAnimation!))
@@ -48,8 +49,8 @@ class SophiaClass: SKSpriteNode {
             if self.xScale < 0 {
                 self.xScale = (self.xScale) * -1;
             }
-            
         } else {
+            /// Andar para esquerda
             if physicsBody?.velocity.dx >= 0 {
                 self.runAction(SKAction.repeatActionForever(walkingAnimation!))
             }
