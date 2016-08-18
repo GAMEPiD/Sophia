@@ -1,0 +1,515 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		146A41571D662D6700FDCFA6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146A41561D662D6700FDCFA6 /* AppDelegate.swift */; };
+		146A41591D662D6700FDCFA6 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 146A41581D662D6700FDCFA6 /* GameScene.sks */; };
+		146A415B1D662D6700FDCFA6 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146A415A1D662D6700FDCFA6 /* GameScene.swift */; };
+		146A415D1D662D6700FDCFA6 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146A415C1D662D6700FDCFA6 /* GameViewController.swift */; };
+		146A41601D662D6700FDCFA6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 146A415E1D662D6700FDCFA6 /* Main.storyboard */; };
+		146A41621D662D6700FDCFA6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 146A41611D662D6700FDCFA6 /* Assets.xcassets */; };
+		146A41651D662D6700FDCFA6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 146A41631D662D6700FDCFA6 /* LaunchScreen.storyboard */; };
+		146A41701D662D6700FDCFA6 /* SophiaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146A416F1D662D6700FDCFA6 /* SophiaTests.swift */; };
+		146A417B1D662D6700FDCFA6 /* SophiaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146A417A1D662D6700FDCFA6 /* SophiaUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		146A416C1D662D6700FDCFA6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 146A414B1D662D6700FDCFA6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 146A41521D662D6700FDCFA6;
+			remoteInfo = Sophia;
+		};
+		146A41771D662D6700FDCFA6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 146A414B1D662D6700FDCFA6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 146A41521D662D6700FDCFA6;
+			remoteInfo = Sophia;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		146A41531D662D6700FDCFA6 /* Sophia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sophia.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		146A41561D662D6700FDCFA6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		146A41581D662D6700FDCFA6 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		146A415A1D662D6700FDCFA6 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		146A415C1D662D6700FDCFA6 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		146A415F1D662D6700FDCFA6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		146A41611D662D6700FDCFA6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		146A41641D662D6700FDCFA6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		146A41661D662D6700FDCFA6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		146A416B1D662D6700FDCFA6 /* SophiaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SophiaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		146A416F1D662D6700FDCFA6 /* SophiaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SophiaTests.swift; sourceTree = "<group>"; };
+		146A41711D662D6700FDCFA6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		146A41761D662D6700FDCFA6 /* SophiaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SophiaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		146A417A1D662D6700FDCFA6 /* SophiaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SophiaUITests.swift; sourceTree = "<group>"; };
+		146A417C1D662D6700FDCFA6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		146A41501D662D6700FDCFA6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		146A41681D662D6700FDCFA6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		146A41731D662D6700FDCFA6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		146A414A1D662D6700FDCFA6 = {
+			isa = PBXGroup;
+			children = (
+				146A41551D662D6700FDCFA6 /* Sophia */,
+				146A416E1D662D6700FDCFA6 /* SophiaTests */,
+				146A41791D662D6700FDCFA6 /* SophiaUITests */,
+				146A41541D662D6700FDCFA6 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		146A41541D662D6700FDCFA6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				146A41531D662D6700FDCFA6 /* Sophia.app */,
+				146A416B1D662D6700FDCFA6 /* SophiaTests.xctest */,
+				146A41761D662D6700FDCFA6 /* SophiaUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		146A41551D662D6700FDCFA6 /* Sophia */ = {
+			isa = PBXGroup;
+			children = (
+				146A41561D662D6700FDCFA6 /* AppDelegate.swift */,
+				146A41581D662D6700FDCFA6 /* GameScene.sks */,
+				146A415A1D662D6700FDCFA6 /* GameScene.swift */,
+				146A415C1D662D6700FDCFA6 /* GameViewController.swift */,
+				146A415E1D662D6700FDCFA6 /* Main.storyboard */,
+				146A41611D662D6700FDCFA6 /* Assets.xcassets */,
+				146A41631D662D6700FDCFA6 /* LaunchScreen.storyboard */,
+				146A41661D662D6700FDCFA6 /* Info.plist */,
+			);
+			path = Sophia;
+			sourceTree = "<group>";
+		};
+		146A416E1D662D6700FDCFA6 /* SophiaTests */ = {
+			isa = PBXGroup;
+			children = (
+				146A416F1D662D6700FDCFA6 /* SophiaTests.swift */,
+				146A41711D662D6700FDCFA6 /* Info.plist */,
+			);
+			path = SophiaTests;
+			sourceTree = "<group>";
+		};
+		146A41791D662D6700FDCFA6 /* SophiaUITests */ = {
+			isa = PBXGroup;
+			children = (
+				146A417A1D662D6700FDCFA6 /* SophiaUITests.swift */,
+				146A417C1D662D6700FDCFA6 /* Info.plist */,
+			);
+			path = SophiaUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		146A41521D662D6700FDCFA6 /* Sophia */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 146A417F1D662D6700FDCFA6 /* Build configuration list for PBXNativeTarget "Sophia" */;
+			buildPhases = (
+				146A414F1D662D6700FDCFA6 /* Sources */,
+				146A41501D662D6700FDCFA6 /* Frameworks */,
+				146A41511D662D6700FDCFA6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Sophia;
+			productName = Sophia;
+			productReference = 146A41531D662D6700FDCFA6 /* Sophia.app */;
+			productType = "com.apple.product-type.application";
+		};
+		146A416A1D662D6700FDCFA6 /* SophiaTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 146A41821D662D6700FDCFA6 /* Build configuration list for PBXNativeTarget "SophiaTests" */;
+			buildPhases = (
+				146A41671D662D6700FDCFA6 /* Sources */,
+				146A41681D662D6700FDCFA6 /* Frameworks */,
+				146A41691D662D6700FDCFA6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				146A416D1D662D6700FDCFA6 /* PBXTargetDependency */,
+			);
+			name = SophiaTests;
+			productName = SophiaTests;
+			productReference = 146A416B1D662D6700FDCFA6 /* SophiaTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		146A41751D662D6700FDCFA6 /* SophiaUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 146A41851D662D6700FDCFA6 /* Build configuration list for PBXNativeTarget "SophiaUITests" */;
+			buildPhases = (
+				146A41721D662D6700FDCFA6 /* Sources */,
+				146A41731D662D6700FDCFA6 /* Frameworks */,
+				146A41741D662D6700FDCFA6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				146A41781D662D6700FDCFA6 /* PBXTargetDependency */,
+			);
+			name = SophiaUITests;
+			productName = SophiaUITests;
+			productReference = 146A41761D662D6700FDCFA6 /* SophiaUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		146A414B1D662D6700FDCFA6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = GAMEPiD;
+				TargetAttributes = {
+					146A41521D662D6700FDCFA6 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					146A416A1D662D6700FDCFA6 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 146A41521D662D6700FDCFA6;
+					};
+					146A41751D662D6700FDCFA6 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 146A41521D662D6700FDCFA6;
+					};
+				};
+			};
+			buildConfigurationList = 146A414E1D662D6700FDCFA6 /* Build configuration list for PBXProject "Sophia" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 146A414A1D662D6700FDCFA6;
+			productRefGroup = 146A41541D662D6700FDCFA6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				146A41521D662D6700FDCFA6 /* Sophia */,
+				146A416A1D662D6700FDCFA6 /* SophiaTests */,
+				146A41751D662D6700FDCFA6 /* SophiaUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		146A41511D662D6700FDCFA6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				146A41591D662D6700FDCFA6 /* GameScene.sks in Resources */,
+				146A41651D662D6700FDCFA6 /* LaunchScreen.storyboard in Resources */,
+				146A41621D662D6700FDCFA6 /* Assets.xcassets in Resources */,
+				146A41601D662D6700FDCFA6 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		146A41691D662D6700FDCFA6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		146A41741D662D6700FDCFA6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		146A414F1D662D6700FDCFA6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				146A415B1D662D6700FDCFA6 /* GameScene.swift in Sources */,
+				146A415D1D662D6700FDCFA6 /* GameViewController.swift in Sources */,
+				146A41571D662D6700FDCFA6 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		146A41671D662D6700FDCFA6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				146A41701D662D6700FDCFA6 /* SophiaTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		146A41721D662D6700FDCFA6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				146A417B1D662D6700FDCFA6 /* SophiaUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		146A416D1D662D6700FDCFA6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 146A41521D662D6700FDCFA6 /* Sophia */;
+			targetProxy = 146A416C1D662D6700FDCFA6 /* PBXContainerItemProxy */;
+		};
+		146A41781D662D6700FDCFA6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 146A41521D662D6700FDCFA6 /* Sophia */;
+			targetProxy = 146A41771D662D6700FDCFA6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		146A415E1D662D6700FDCFA6 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				146A415F1D662D6700FDCFA6 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		146A41631D662D6700FDCFA6 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				146A41641D662D6700FDCFA6 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		146A417D1D662D6700FDCFA6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		146A417E1D662D6700FDCFA6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		146A41801D662D6700FDCFA6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Sophia/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = GAMEPiD.Sophia;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		146A41811D662D6700FDCFA6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Sophia/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = GAMEPiD.Sophia;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		146A41831D662D6700FDCFA6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				INFOPLIST_FILE = SophiaTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = GAMEPiD.SophiaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Sophia.app/Sophia";
+			};
+			name = Debug;
+		};
+		146A41841D662D6700FDCFA6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = SophiaTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = GAMEPiD.SophiaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Sophia.app/Sophia";
+			};
+			name = Release;
+		};
+		146A41861D662D6700FDCFA6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				INFOPLIST_FILE = SophiaUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = GAMEPiD.SophiaUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Sophia;
+			};
+			name = Debug;
+		};
+		146A41871D662D6700FDCFA6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = SophiaUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = GAMEPiD.SophiaUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Sophia;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		146A414E1D662D6700FDCFA6 /* Build configuration list for PBXProject "Sophia" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				146A417D1D662D6700FDCFA6 /* Debug */,
+				146A417E1D662D6700FDCFA6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		146A417F1D662D6700FDCFA6 /* Build configuration list for PBXNativeTarget "Sophia" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				146A41801D662D6700FDCFA6 /* Debug */,
+				146A41811D662D6700FDCFA6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		146A41821D662D6700FDCFA6 /* Build configuration list for PBXNativeTarget "SophiaTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				146A41831D662D6700FDCFA6 /* Debug */,
+				146A41841D662D6700FDCFA6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		146A41851D662D6700FDCFA6 /* Build configuration list for PBXNativeTarget "SophiaUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				146A41861D662D6700FDCFA6 /* Debug */,
+				146A41871D662D6700FDCFA6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 146A414B1D662D6700FDCFA6 /* Project object */;
+}
