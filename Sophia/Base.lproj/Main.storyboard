@@ -22,7 +22,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <state key="normal" title="Next Screen"/>
                                 <connections>
-                                    <segue destination="BV1-FR-VrT" kind="presentation" modalPresentationStyle="formSheet" modalTransitionStyle="partialCurl" id="KBT-6d-caB"/>
+                                    <segue destination="BV1-FR-VrT" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="KBT-6d-caB"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -46,6 +46,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="FOb-jX-Mpg"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
             </objects>
