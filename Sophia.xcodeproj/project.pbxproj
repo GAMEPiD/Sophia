@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		063FC1F61D666FBE00885E27 /* StartScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 063FC1F51D666FBE00885E27 /* StartScreen.swift */; };
 		146A41571D662D6700FDCFA6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146A41561D662D6700FDCFA6 /* AppDelegate.swift */; };
 		146A41591D662D6700FDCFA6 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 146A41581D662D6700FDCFA6 /* GameScene.sks */; };
 		146A415B1D662D6700FDCFA6 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146A415A1D662D6700FDCFA6 /* GameScene.swift */; };
@@ -43,6 +44,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		063FC1F51D666FBE00885E27 /* StartScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StartScreen.swift; path = Sophia/StartScreen.swift; sourceTree = "<group>"; };
 		146A41531D662D6700FDCFA6 /* Sophia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sophia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		146A41561D662D6700FDCFA6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		146A41581D662D6700FDCFA6 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -93,10 +95,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		063FC1F81D667D4800885E27 /* StartScreen */ = {
+			isa = PBXGroup;
+			children = (
+				063FC1F51D666FBE00885E27 /* StartScreen.swift */,
+			);
+			name = StartScreen;
+			sourceTree = "<group>";
+		};
 		146A414A1D662D6700FDCFA6 = {
 			isa = PBXGroup;
 			children = (
-				146A41931D6645E200FDCFA6 /* Menu */,
+				063FC1F81D667D4800885E27 /* StartScreen */,
 				8A2EF84E1D6644EC0025F5D2 /* Atlas */,
 				8A8763C31D6634E700DAC177 /* Personagem Sophia */,
 				146A41551D662D6700FDCFA6 /* Sophia */,
@@ -317,7 +327,7 @@
 				146A41971D66472E00FDCFA6 /* Menu.swift in Sources */,
 				146A415B1D662D6700FDCFA6 /* GameScene.swift in Sources */,
 				146A415D1D662D6700FDCFA6 /* GameViewController.swift in Sources */,
-				146A41951D66464000FDCFA6 /* StartScreen.swift in Sources */,
+				063FC1F61D666FBE00885E27 /* StartScreen.swift in Sources */,
 				8A8763C51D66353F00DAC177 /* SophiaClass.swift in Sources */,
 				146A41571D662D6700FDCFA6 /* AppDelegate.swift in Sources */,
 			);
