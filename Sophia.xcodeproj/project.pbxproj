@@ -22,7 +22,6 @@
 		146A419D1D66513E00FDCFA6 /* StartScreen.sks in Resources */ = {isa = PBXBuildFile; fileRef = 146A419C1D66513E00FDCFA6 /* StartScreen.sks */; };
 		8A2EF8501D6644F50025F5D2 /* walkingSophia.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 8A2EF84F1D6644F50025F5D2 /* walkingSophia.atlas */; };
 		8A8763C51D66353F00DAC177 /* SophiaClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8763C41D66353F00DAC177 /* SophiaClass.swift */; };
-		8AB298AE1D664BB5005A1D6E /* stopSophia.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 8AB298AD1D664BB5005A1D6E /* stopSophia.atlas */; };
 		8AB298B21D664EAF005A1D6E /* walkSophia.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 8AB298B11D664EAF005A1D6E /* walkSophia.atlas */; };
 /* End PBXBuildFile section */
 
@@ -246,7 +245,7 @@
 				TargetAttributes = {
 					146A41521D662D6700FDCFA6 = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = N8JBYBWDT9;
+						DevelopmentTeam = 526YR6WHWC;
 					};
 					146A416A1D662D6700FDCFA6 = {
 						CreatedOnToolsVersion = 7.3.1;
