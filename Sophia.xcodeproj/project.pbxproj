@@ -19,7 +19,6 @@
 		146A417B1D662D6700FDCFA6 /* SophiaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146A417A1D662D6700FDCFA6 /* SophiaUITests.swift */; };
 		8A6DB33F1D6808F300E48DD9 /* Caixa.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6DB33E1D6808F300E48DD9 /* Caixa.swift */; };
 		8A8763C51D66353F00DAC177 /* SophiaClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8763C41D66353F00DAC177 /* SophiaClass.swift */; };
-		8AB298AE1D664BB5005A1D6E /* stopSophia.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 8AB298AD1D664BB5005A1D6E /* stopSophia.atlas */; };
 		8AB298B21D664EAF005A1D6E /* walkSophia.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 8AB298B11D664EAF005A1D6E /* walkSophia.atlas */; };
 		8AD5D0C71D6732D0006377BD /* Plataform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD5D0C61D6732D0006377BD /* Plataform.swift */; };
 /* End PBXBuildFile section */
@@ -126,8 +125,8 @@
 			isa = PBXGroup;
 			children = (
 				146A41561D662D6700FDCFA6 /* AppDelegate.swift */,
-				146A41581D662D6700FDCFA6 /* GameScene.sks */,
 				146A415A1D662D6700FDCFA6 /* GameScene.swift */,
+				146A41581D662D6700FDCFA6 /* GameScene.sks */,
 				146A415C1D662D6700FDCFA6 /* GameViewController.swift */,
 				146A415E1D662D6700FDCFA6 /* Main.storyboard */,
 				146A41611D662D6700FDCFA6 /* Assets.xcassets */,
@@ -153,6 +152,17 @@
 				146A417C1D662D6700FDCFA6 /* Info.plist */,
 			);
 			path = SophiaUITests;
+			sourceTree = "<group>";
+		};
+		146A41931D6645E200FDCFA6 /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				146A41941D66464000FDCFA6 /* StartScreen.swift */,
+				146A419C1D66513E00FDCFA6 /* StartScreen.sks */,
+				146A41961D66472E00FDCFA6 /* Menu.swift */,
+				146A419A1D664B5600FDCFA6 /* Menu.sks */,
+			);
+			name = Menu;
 			sourceTree = "<group>";
 		};
 		8A2EF84E1D6644EC0025F5D2 /* Atlas */ = {
@@ -249,7 +259,7 @@
 				TargetAttributes = {
 					146A41521D662D6700FDCFA6 = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = N8JBYBWDT9;
+						DevelopmentTeam = 526YR6WHWC;
 					};
 					146A416A1D662D6700FDCFA6 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -286,10 +296,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				146A419B1D664B5600FDCFA6 /* Menu.sks in Resources */,
 				146A41591D662D6700FDCFA6 /* GameScene.sks in Resources */,
 				146A41651D662D6700FDCFA6 /* LaunchScreen.storyboard in Resources */,
 				146A41621D662D6700FDCFA6 /* Assets.xcassets in Resources */,
-				8AB298AE1D664BB5005A1D6E /* stopSophia.atlas in Resources */,
+				8A2EF8501D6644F50025F5D2 /* walkingSophia.atlas in Resources */,
+				146A419D1D66513E00FDCFA6 /* StartScreen.sks in Resources */,
 				146A41601D662D6700FDCFA6 /* Main.storyboard in Resources */,
 				8AB298B21D664EAF005A1D6E /* walkSophia.atlas in Resources */,
 			);
@@ -316,6 +328,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				146A41971D66472E00FDCFA6 /* Menu.swift in Sources */,
 				146A415B1D662D6700FDCFA6 /* GameScene.swift in Sources */,
 				146A415D1D662D6700FDCFA6 /* GameViewController.swift in Sources */,
 				8A6DB33F1D6808F300E48DD9 /* Caixa.swift in Sources */,

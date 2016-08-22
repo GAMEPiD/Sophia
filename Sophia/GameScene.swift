@@ -34,6 +34,7 @@ class GameScene: SKScene, UIGestureRecognizerDelegate {
         
         self.addChild(myLabel)
         
+        //self.childNodeWithName("sophia")?.position.x = (self.childNodeWithName("sophia")?.position.x)!+100
         
         /// Iniciando posicao da sophia
         
