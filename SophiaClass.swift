@@ -23,12 +23,17 @@ class SophiaClass: SKSpriteNode {
         let texture = SKTexture(imageNamed: "stopSophia01.png")
         super.init(texture: texture, color: SKColor.clearColor(), size: texture.size())
         
+        /// Setting initial state of Sophia
+        
         initSophiaAnimation()
         self.name = "sophiaNode"
-        self.physicsBody = SKPhysicsBody(circleOfRadius: (self.texture?.size().height)!/4)
-        self.physicsBody?.affectedByGravity = false
+        self.physicsBody = SKPhysicsBody(circleOfRadius: (self.texture?.size().height)!/2.5)
+        self.physicsBody?.affectedByGravity = true
+        self.physicsBody?.allowsRotation = false
         
-        /// Iniciando animação inicial
+        self.physicsBody?.restitution = 0
+        self.physicsBody?.friction = 0
+        /// Initiating animation
         
         self.runAction(SKAction.repeatActionForever(stopAnimation!))
         
@@ -40,24 +45,32 @@ class SophiaClass: SKSpriteNode {
     }
     
     func andar(lado: Int) {
-        /// Andar para direita
+        
+        /// Move to Right
         if lado == 2 {
             if physicsBody?.velocity.dx <= 0 {
                 self.runAction(SKAction.repeatActionForever(walkingAnimation!))
             }
-            self.physicsBody?.velocity.dx = 100
+            self.physicsBody?.velocity.dx = 400
             if self.xScale < 0 {
                 self.xScale = (self.xScale) * -1;
             }
-        } else {
-            /// Andar para esquerda
+        } else if lado == 1 {
+            
+            /// Move to Left
             if physicsBody?.velocity.dx >= 0 {
                 self.runAction(SKAction.repeatActionForever(walkingAnimation!))
             }
             if self.xScale > 0 {
                 self.xScale = (self.xScale) * -1;
             }
-            self.physicsBody?.velocity.dx = -100
+            self.physicsBody?.velocity.dx = -400
+        } else {
+            
+            if physicsBody?.velocity.dx != 0 {
+                self.runAction(SKAction.repeatActionForever(stopAnimation!))
+            }
+            self.physicsBody?.velocity.dx = 0
         }
     }
     

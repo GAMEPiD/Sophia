@@ -13,7 +13,16 @@ var panGesture: UIPanGestureRecognizer = UIPanGestureRecognizer()
 
 var previousPosition: CGPoint?
 
+let myCamera = SKCameraNode()
+var spriteCaixa = SKNode()
+
 let sophia: SophiaClass = SophiaClass()
+let plataforma2: Plataform = Plataform()
+let plataforma3: Plataform = Plataform()
+
+var movimentoEscolhido = 0
+var controlandoObjetos = false
+
 
 class GameScene: SKScene, UIGestureRecognizerDelegate {
     override func didMoveToView(view: SKView) {
@@ -26,12 +35,26 @@ class GameScene: SKScene, UIGestureRecognizerDelegate {
         self.addChild(myLabel)
         
         
-        //sophia = SophiaClass()
-        sophia.position.x = self.childNodeWithName("sophia")!.position.x+200
-        sophia.position.y = self.childNodeWithName("sophia")!.position.y
+        /// Iniciando posicao da sophia
+        
+        sophia.position = self.childNodeWithName("sophia")!.position
         
         self.childNodeWithName("sophia")?.removeFromParent()
         self.addChild(sophia)
+        
+        /// Iniciando plataformas e objetos controláveis
+        
+        plataforma2.position = self.childNodeWithName("plataform2")!.position
+        self.childNodeWithName("plataform2")?.removeFromParent()
+        self.addChild(plataforma2)
+        plataforma2.initPlataform(1)
+        
+        plataforma3.position = self.childNodeWithName("plataform3")!.position
+        self.childNodeWithName("plataform3")?.removeFromParent()
+        self.addChild(plataforma3)
+        plataforma3.initPlataform(2)
+        
+        spriteCaixa = self.childNodeWithName("caixa")!
         
         /// GESTURES
         
@@ -44,43 +67,81 @@ class GameScene: SKScene, UIGestureRecognizerDelegate {
         
         tapGesture.delegate = self
         panGesture.delegate = self
+        
+        /// Configurando camera
+        
+        self.camera = myCamera
+        myCamera.setScale(2)
+        myCamera.position = sophia.position
+        
     }
-    
-    //    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
-    //        sophia.andar((Int)(1+arc4random()%2))
-    //
-    //    }
     
     override func update(currentTime: CFTimeInterval) {
         /* Called before each frame is rendered */
+        myCamera.position = sophia.position
+        sophia.andar(movimentoEscolhido)
     }
+    
     
     func tapControl(sender: UITapGestureRecognizer){
         print("Pulou")
-        sophia.physicsBody?.applyImpulse(CGVectorMake((sophia.physicsBody?.velocity.dx)!, 50))
+        sophia.physicsBody?.applyImpulse(CGVectorMake((sophia.physicsBody?.velocity.dx)!, 3500))
         
     }
     
     func panControl(sender: UIPanGestureRecognizer){
-        if panGesture.locationInView(self.view).x > previousPosition?.x {
-            if panGesture.locationInView(self.view).x > previousPosition!.x+200{
-                previousPosition!.x = panGesture.locationInView(self.view).x-200
+        
+        /// Controlando objetos na cena
+        if controlandoObjetos {
+            let position = self.view?.convertPoint(sender.locationInView(sender.view), toScene: self)
+            spriteCaixa.runAction(SKAction.moveTo(position!, duration: 0.5))
+            
+//            if(sender.state == .Ended){
+//                spriteCaixa.removeAllActions()
+//                spriteCaixa = SKNode()
+//            }
+        } else {
+            
+            /// Making Sophia Walk
+            if panGesture.locationInView(self.view).x > previousPosition?.x {
+                
+                /// Fazendo o gesture ficar mais responsivo
+                if panGesture.locationInView(self.view).x > previousPosition!.x+200{
+                    previousPosition!.x = panGesture.locationInView(self.view).x-200
+                }
+                movimentoEscolhido = 2
+            } else if panGesture.locationInView(self.view).x < previousPosition?.x{
+                
+                /// Fazendo o gesture ficar mais responsivo
+                if panGesture.locationInView(self.view).x < previousPosition!.x-200{
+                    previousPosition!.x = panGesture.locationInView(self.view).x+200
+                }
+                movimentoEscolhido = 1
             }
-            sophia.andar(2)
-        } else if panGesture.locationInView(self.view).x < previousPosition?.x{
-            if panGesture.locationInView(self.view).x < previousPosition!.x-200{
-                previousPosition!.x = panGesture.locationInView(self.view).x+200
+            
+            if panGesture.state == .Ended {
+                movimentoEscolhido = 0
             }
-            sophia.andar(1)
         }
     }
     
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         /* Called when a touch begins */
+        
+        /// Definindo ponto de toque inicial para gesture de pan ficar mais responsivo
+        
+        for touch in touches{
+            let touchLocation = touch.locationInNode(self)
+            if spriteCaixa.containsPoint(touchLocation){
+                controlandoObjetos = true
+            } else {
+                controlandoObjetos = false
+            }
+        }
+        
         if panGesture.locationInView(self.view).x < (self.view?.frame.size.width)!/2{
             previousPosition = panGesture.locationInView(self.view)
         }
-        print("tocou")
     }
     
     func gestureRecognizer(gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWithGestureRecognizer otherGestureRecognizer: UIGestureRecognizer) -> Bool {
@@ -88,7 +149,9 @@ class GameScene: SKScene, UIGestureRecognizerDelegate {
     }
     
     func gestureRecognizer(gestureRecognizer: UIGestureRecognizer, shouldReceiveTouch touch: UITouch) -> Bool {
-        if gestureRecognizer == panGesture && touch.locationInView(self.view).x > (self.view?.frame.size.width)!/2 {
+        
+        /// Definindo onde o Tap e o Pan podem ser executados
+        if gestureRecognizer == panGesture && touch.locationInView(self.view).x > (self.view?.frame.size.width)!/2 && controlandoObjetos == false{
             return false
         }
         if gestureRecognizer == tapGesture && touch.locationInView(self.view).x < (self.view?.frame.size.width)!/2 {
